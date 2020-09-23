@@ -36,6 +36,13 @@ class logs_paymentController extends Controller
         }
         elseif(isset($item_user_id) && isset($item_pay_method)){
             $card=logs_payment::where([
+                ['user_id',  $item_user_id],
+                ['pay_method',  $item_pay_method]
+            ])->get();
+            return view('check',['card'=>$card]);
+        }
+        elseif(isset($item_user_id) && isset($item_pay_method)){
+            $card=logs_payment::where([
                 ['item_user_id',  $item_user_id],
                 ['pay_method',  $item_pay_method]
             ])->get();
@@ -73,6 +80,7 @@ class logs_paymentController extends Controller
             ])->get();
             return view('check',['card'=>$card]);
         }
+        
         
         
     }

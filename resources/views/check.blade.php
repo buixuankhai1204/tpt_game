@@ -12,12 +12,12 @@
             </div>
             @endif
             <div class="row">
-                <label for="user_id" class="font-weight-bold">USER_ID:</label>
+                <label for="user_id" class="font-weight-bold mr-5">USER_ID:</label>
                 <input type="text" class="col-md-4 ml-5" id="user_id" name="user_id">
                 <button class="btn btn-danger ml-5">check</button>
             </div>
             <div class="row my-3">
-                <label for="status" class="font-weight-bold mr-1">STATUS:</label>
+                <label for="status" class="font-weight-bold mr-5">STATUS:</label>
                 <select name="status" id="status" class="col-md-4 ml-5">
                     <option value="">chọn</option>
                     <option value="SUCCESS">SUCCESS</option>
@@ -26,7 +26,7 @@
                 </select>
             </div>
             <div class="row">
-            <label for="pay_method" class="font-weight-bold text-uppercase">pay_method:</label>
+            <label for="pay_method" class="font-weight-bold text-uppercase mr-2">pay_method:</label>
             <select name="pay_method" id="pay_method" class="col-md-4 ml-5 mb-3">
                     <option value="">chọn</option>
                     <option value="txu">TXU</option>
@@ -38,7 +38,7 @@
             </div>
             <div class="row">
                 <label for="transaction_id" class="font-weight-bold">TRANSACTION_ID:</label>
-                <input type="text" class="col-md-4 ml-5" id="transaction_id" name="transaction_id">
+                <input type="text" class="col-md-4 ml-4" id="transaction_id" name="transaction_id">
             </div>
         </form>
         <table class="table table-hover">
@@ -71,7 +71,8 @@
         <script>
             $(function() {
                 $("td:contains('SUCCESS')").css("background-color", "#31B404");
-                $("td:contains('FAIL')").css("background-color", "##DF0101");
+                $("td:contains('FAIL')").css("background-color", "#DF0101");
+                $("td:contains('INIT')").css("background-color", "#FFFF00");
             });
         </script>
 
